@@ -86,17 +86,13 @@ namespace AdventOfCode2021.Solutions
                 {
                     charToDelete = isMostCommon ? '1' : '0';
                 }
-                
-                var LinesToDelete = new List<int>();
 
-                for(int i = 0; i < remainingLines.Count; i++)
+                for(int i = remainingLines.Count; i > 0; i--)
                 {
-                    if(remainingLines[i][index] == charToDelete) { LinesToDelete.Add(i); }
-                }
-
-                for (var i = LinesToDelete.Count; i > 0 ; i--)
-                {
-                    remainingLines.RemoveAt(LinesToDelete[i-1]);
+                    if(remainingLines[i-1][index] == charToDelete) 
+                    { 
+                        remainingLines.RemoveAt(i - 1); 
+                    }
                 }
 
                 index++;

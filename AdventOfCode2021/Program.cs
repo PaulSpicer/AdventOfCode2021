@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2021.Solutions;
+
 while(true)
 {
     Console.WriteLine("Welcome to Advent of Code 2021 - Select a solution to run: ");
